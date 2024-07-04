@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3ama8wwf3iso"]
+[gd_scene load_steps=4 format=3 uid="uid://b3ama8wwf3iso"]
 
 [ext_resource type="Script" path="res://ui/CajaHerramientas.gd" id="1_fqh8t"]
+[ext_resource type="PackedScene" uid="uid://drkvgiusrvc4l" path="res://ui/btn/BtnAdd.tscn" id="2_nsvnm"]
+[ext_resource type="PackedScene" uid="uid://75h3rwxhhsld" path="res://componentes/chincheta.tscn" id="3_njjpt"]
 
 [node name="CajaHerramientas" type="Control"]
 layout_mode = 3
@@ -9,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 0
 script = ExtResource("1_fqh8t")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
@@ -16,8 +19,10 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="AddChincheta" type="Button" parent="HBoxContainer"]
+[node name="BtnChincheta" parent="HBoxContainer" instance=ExtResource("2_nsvnm")]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Chincheta"
+forma = ExtResource("3_njjpt")
 
-[connection signal="pressed" from="HBoxContainer/AddChincheta" to="." method="_on_add_chincheta_pressed"]
+[connection signal="pressed" from="HBoxContainer/BtnChincheta" to="." method="_on_btn_chincheta_pressed"]

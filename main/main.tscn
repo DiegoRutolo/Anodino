@@ -10,5 +10,3 @@ script = ExtResource("1_4ji2h")
 
 [node name="Escritorio" type="Node2D" parent="."]
 unique_name_in_owner = true
-
-[connection signal="crear_forma" from="CajaHerramientas" to="." method="_on_caja_herramientas_crear_forma"]
