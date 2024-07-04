@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhnvp5lf5wirj"]
+
+[ext_resource type="Script" path="res://main/main.gd" id="1_4ji2h"]
+[ext_resource type="PackedScene" uid="uid://b3ama8wwf3iso" path="res://ui/caja_herramientas.tscn" id="2_neodb"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_4ji2h")
+
+[node name="CajaHerramientas" parent="." instance=ExtResource("2_neodb")]
+
+[node name="Escritorio" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[connection signal="crear_forma" from="CajaHerramientas" to="." method="_on_caja_herramientas_crear_forma"]

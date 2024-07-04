@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2g7ts4021hof"]
+
+[ext_resource type="Script" path="res://componentes/forma.gd" id="1_b1mtq"]
+
+[node name="Forma" type="Node2D"]
+script = ExtResource("1_b1mtq")
